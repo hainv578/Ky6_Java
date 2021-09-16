@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+	<div class="panel-heading">Category editon</div>
+	<div class="panel-body">
+		<div class="row">
+					<div class="form-group col-sm-6">
+						<div>Name</div>
+						<input ng-model="form1.name" class="form-control">
+					</div>
+		</div>
+	</div>
+	<div class="panel-footer text-center">
+		<button ng-click="create()" class="btn btn-primary">
+			<i class="fa fa-plus"></i> Create
+		</button>
+		<button ng-click="update()" class="btn btn-success">
+			<i class="fa fa-save"></i> Update
+		</button>
+		<button ng-click="delete(form)" class="btn btn-danger">
+			<i class="fa fa-trash"></i> Delete
+		</button>
+		<button ng-click="reset()" class="btn btn-info">
+			<i class="fa fa-sync-all"></i>Reset
+		</button>
+	</div>
+</div>

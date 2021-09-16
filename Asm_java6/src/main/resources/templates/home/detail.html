@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+<body>
+	<main th:object="${p}" class="poly-item-detail">
+		<div class="container">
+			<div class="card">
+				<div class="row">
+					<div class="col">
+						<div class="">
+							<div class="text-center">
+								<img th:src="@{|/assets/images/*{image}|}">
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<ul>
+							<li th:text="*{name}"></li>
+							<li th:text="*{price}"></li>
+							<li th:text="*{createDate}"></li>
+							<li th:text="*{category.name}"></li>
+						</ul>
+						<button class="btn btn-success"
+							th:attr="ng-click=@{|cart.add(${p.id})|}">
+							<i class="fa fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3>Sản phẩm cùng loại</h3>
+		<div class="card-group">
+			<div class="row">
+				<div class="col card poly-item text-center"
+					th:each="item, state:${products}" style="margin-left: 10px;">
+					<a th:href="'/home/detail/'+${item.id}"><img
+						th:src="@{|/assets/images/${item.image}|}"></a>
+					<div class="card-body">
+						<p class="card-title">[[${item.name}]]</p>
+						<p class="card-title">[[${item.price}]] triệu VNĐ</p>
+					</div>
+					<div class="btn-group">
+						<button class="btn btn-success"
+							th:attr="ng-click=@{|cart.add(${p.id})|}">
+							<i class="fa fa-shopping-cart"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+</body>
+</html>

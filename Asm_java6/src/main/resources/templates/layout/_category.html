@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:fragment="category" style="margin-top: 10px">
+    	<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+		  <a class="navbar-brand">Loại Sản Phẩm</a>
+		  <nav class="nav nav-pills flex-column" th:each="c:${listcategory}">
+		    <a class="nav-link" th:href="@{|/home/paging=${c.id}|}" th:value="${c.id}">[[${c.name}]]</a>
+		  </nav>
+		</nav>
+    </div>
+	
+</body>
+</html>

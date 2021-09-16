@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+	<div class="panel-heading">Category list</div>
+	<table class="table table-condensed">
+		<thead class="bg-success" style="font-variant: small-caps;">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th></th>
+				<th></th>
+			</tr>  
+		</thead>
+		<tbody>
+			<tr ng-repeat ="item in pager.items">
+				<td>{{item.id}}</td>
+				<td>{{item.name}}</td>
+				<td>
+					<div class="btn-group btn-group-xs">
+						<button ng-click="edit(item)" class="btn btn-waring fa fa-edit"></button>
+						<button ng-click="delete(item)" class="btn btn-waring fa fa-trash"></button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div aria-label="Page navigation example">
+		<ul class="pagination">
+		  <li class="page-item"><a class="page-link" ng-click="pager.prev()" href="">Previous</a></li>
+		  <li class="page-item"><a class="page-link" href="#">{{pager.page + 1}} of {{pager.count}}</a></li>
+		  <li class="page-item"><a class="page-link" ng-click="pager.next()" href="">Next</a></li>
+		</ul>
+	  </div>
+</div>

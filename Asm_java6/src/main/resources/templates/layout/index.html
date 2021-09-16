@@ -1,0 +1,111 @@
+<!doctype html>
+<html xmlns="https://www.thymeleaf.org" th:fragment="dynamic(main)">
+<head>
+<title>Title</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+<!--     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!--   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/shoppingcart.css}"
+	href="../../static/assets/css/shoppingcart.css" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/header.css}"
+	href="../../static/assets/css/header.css" />
+
+</head>
+<body class="container" ng-app="shopping-cart-app"
+	ng-controller="shopping-cart-ctrl">
+	<header class="">
+		<div th:replace="/layout/_header.html"></div>
+	</header>
+	<nav class="">
+		<div th:replace="/layout/_menu.html"></div>
+	</nav>
+	<div class="row" style="margin-top: 10px">
+		<article class="col-sm-9">
+			<div th:replace="${main}"></div>
+		</article>
+		<aside class="col-sm-3">
+
+			<div th:replace="/layout/_category.html"></div>
+		</aside>
+	</div>
+	<nav aria-label="Page navigation example"
+		style="width: 50%; height: 50%; margin: auto; margin-top: 20px;">
+		<ul class="pagination justify-content-center">
+			<li class="page-item"><a class="page-link" href="/home/view?p=0">
+					First</a></li>
+			<li class="page-item" th:each="pageNumber : ${pageNumbers}"><a
+				class="page-link" th:href="@{|/home/view?p=0${pageNumber}|}"
+				th:text=${pageNumber}>1</a></li>
+			<li class="page-item"><a class="page-link"
+				href="/home/view?p=${pageNumber+1}">Next</a></li>
+		</ul>
+	</nav>
+	<footer class="bg-dark text-center text-white">
+		<!-- Grid container -->
+		<div class="container p-4">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class="fa fa-facebook-square"></i></a>
+				<!-- Twitter -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class="fa fa-twitter"></i></a>
+
+				<!-- Google -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class="fa fa-google"></i></a>
+
+				<!-- Instagram -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class="fa fa-instagram"></i></a>
+
+				<!-- Linkedin -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class="fa fa-linkedin"></i></a>
+
+				<!-- Github -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class="fa fa-github"></i></a>
+			</section>
+		</div>
+
+		<div class="text-center p-3"
+			style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2021 Copyright: <a class="text-white"
+				href="https://www.facebook.com/nguyenthanh.23.08/">Nguyễn Phúc
+				Thành</a>
+		</div>
+	</footer>
+	<script src="/assets/js/shopping-cart-ctrl.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+</html>
+

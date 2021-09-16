@@ -1,0 +1,71 @@
+<div>
+	<div class="container" style="background: black; height: 30px;">
+		<div class="col d-flex justify-content-end">
+			<p class="">
+				<i class="fa fa-user" style="color: white;"></i><a th:if="${#request.remoteUser}"
+					style="color: white; padding-left: 10px; font-size: 13px">Tài
+					khoản : [[${#request.remoteUser}]]</a> <i class="fa fa-map-marker"
+					style="color: #fff; padding-left: 5px"></i></i><a href=""
+					style="color: white; padding-left: 10px; font-size: 13px">Hệ
+					thống cửa hàng </a>
+			</p>
+		</div>
+	</div>
+	<hr class="hr1" style="margin: 0px">
+	<div class="container" style="background: #154854;">
+		<div class="row">
+			<div class="col">
+				<div class="logo">
+					<a href="#"><img class=" " src="/assets/images/123.png"
+						alt="logo" width="230px" height="100px"></a>
+				</div>
+
+			</div>
+			<div class="col" style="margin-top: 25px; padding: 0px;">
+				<div class="search">
+					<form action="" method="post">
+						<div class="input-group mb-3" style="width: 400px;">
+							<input required="" type="email" id="contact_email"
+								name="contact[email]" autocomplete="off" class="form-control"
+								placeholder="Bạn đang tìm sản phẩm nào ...">
+							<button class="btn btn-outline-secondary" type="button">
+								<i class="fa fa-search"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+			<div class="col"
+				style="display: grid; grid-template-columns: 50px 160px;">
+				<div class="border-one"
+					style="border: 3px solid #f8f4f4;border-radius: 50%;width: 35px;height: 35px;margin-top: 25px;margin-left: 55px;">
+					<i class="fa fa-phone fa-1x"
+						style="color: #fff; margin-left: 8px; margin-top: 9px;"></i>
+				</div>
+				<div class="phone" style="margin-top: 25px;margin-left: 60px;">
+					<a href="#" style="color: #fff;"> 0123456789 </a>
+					<p style="color: #fff; font-size: 14px">Hotline</p>
+				</div>
+			</div>
+			<div class="col"
+				style="display: grid; grid-template-columns: 50px 160px; padding: 0px">
+				<div class="border-tow"
+					style="border: 3px solid #f8f4f4; border-radius: 50%; width: 35px; height: 35px; margin-top: 25px; ">
+					<i class="icon-tow fa fa-shopping-cart fa-1x"
+						style="color: #fff; margin-left: 6px; margin-top: 6px;"></i>
+				</div>
+				<div class="cart" style="margin-top: 25px">
+					<a th:href="@{/cart/view}" style="color: #fff;"> <span style="color: #fff;">({{cart.count}})</span>  Sản
+						phẩm
+					</a>
+					
+					<p style="color: #fff; font-size: 14px">Giỏ hàng</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="background: black;"></div>
+
+</div>

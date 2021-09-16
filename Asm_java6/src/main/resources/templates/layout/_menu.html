@@ -1,0 +1,30 @@
+<nav class="  navbar navbar-expand-md navbar-dark bg-dark">
+	<a class="navbar-brand" href="#"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false"
+		aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active"><a class="nav-link" th:href="@{/home/view}">Home
+					<span class="sr-only">(current)</span>
+			</a>
+			<th:block th:if="${#request.remoteUser}">
+				<li class="nav-item"><a class="nav-link"
+					th:href="@{/security/logoff}">Logout</a></li>
+				<li class="nav-item"><a class="nav-link"
+					th:href="@{/order/list}">Your Order</a></li>
+				<li th:if="${#request.isUserInRole('DIRE')}" class="nav-item"><a class="nav-link"
+					th:href="@{/admin/layoutadmin/index.html}">Administration</a></li>
+			</th:block>
+			<th:block th:unless="${#request.remoteUser}">
+				<li class="nav-item"><a class="nav-link"
+					th:href="@{/security/login/form}">SignIn</a></li>
+			</th:block>
+		</ul>
+		
+	</div>
+</nav>

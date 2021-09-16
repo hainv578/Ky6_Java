@@ -1,0 +1,94 @@
+/* * { */
+/* 	box-sizing: border-box; */
+/* } */
+
+/* body { */
+/* 	font-family: 'Roboto', sans-serif; */
+/* 	position: relative; */
+/* 	font-weight: 400px; */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* } */
+/* .container{ */
+/* 	margin: auto; */
+/* } */
+/* ul li { */
+/* 	list-style: none; */
+/* } */
+
+/* a:hover { */
+/* 	outline: none; */
+/* 	text-decoration: none; */
+/* } */
+
+/* a:focus { */
+/* 	outline: none; */
+/* 	outline-offset: 0; */
+/* } */
+
+/* a { */
+/* 	-webkit-transition: 300ms; */
+/* 	transition: 300ms; */
+/* } */
+
+/* h2 { */
+/* 	font-family: 'Roboto', sans-serif; */
+/* } */
+
+/* h2.title { */
+/* 	color: #FE980F; */
+/* 	font-family: 'Roboto', sans-serif; */
+/* 	font-size: 18px; */
+/* 	font-weight: 700; */
+/* 	margin: 0 15px; */
+/* 	margin-bottom: 30px; */
+/* 	position: relative; */
+/* } */
+/* .hr1{ */
+/* 	border: 1px solid #f8f4f4; margin: 0px */
+/* } */
+/* .header{ */
+/* 	background: #282727; height: 100px; */
+/* 	width: auto; */
+/* } */
+/* .search{ */
+/* 	margin-left: 10px; margin-top: 30px; padding: 0px; width: 120px */
+/* } */
+/* .logo{ */
+/* 	margin-left: 180px; margin-top: 10px; padding: 0px; width: 120px */
+/* } */
+/* .icon-phone{ */
+/* 	display: grid; grid-template-columns: 1fr 1fr; */
+/* } */
+/* .icon-one{ */
+/* 	color: white; margin: 8px 0 0 9px; */
+/* } */
+/* .icon-tow{ */
+/* 	color: white; margin: 7px 0 0 7px; */
+/* } */
+/* .shopping { */
+/* 	display: grid; grid-template-columns: 1fr 1fr; */
+/* } */
+/* .border-one{ */
+/* 	border: 3px solid #f8f4f4; border-radius: 50%; width: 50px; height: 50px; margin-top: 20px; margin-left: 40px */
+/* } */
+/* .border-tow{ */
+/* 	border: 3px solid #f8f4f4; border-radius: 50%; width: 50px; height: 50px; margin-top: 20px; margin-left: 30px */
+/* } */
+/* .phone{ */
+/* 	color: white; */
+/* 	margin-top: 20px; */
+/* } */
+/* .cart{ */
+/* 	color: white; */
+/* 	margin-top: 20px; */
+/* } */
+
+/* footer{ */
+/*             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+/*         } */
+/*         .footer-center{ */
+/*             background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('https://theme.hstatic.net/1000160337/1000373353/14/backgrounf_footer.jpg?v=173'); */
+/*             background-size: cover; */
+/*             color: white; */
+/*         } */
